@@ -23,7 +23,7 @@ export default function Home() {
                 Plataforma para criadores de conteúdo
               </div>
 
-              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-amber-400">
+              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-l from-amber-600 to-amber-400">
                 Monetize seu público de forma descomplicada
               </h1>
 
@@ -70,3 +70,6 @@ export default function Home() {
     </div>
   );
 }
+
+
+r barata ribeiro 530 sala 52 - Ed. Apóstolo sçao paulo guanabara
