@@ -1,11 +1,23 @@
 import { FeatureCard } from "@/components/FeatureCard";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, HandCoins, Heart, Shield, Zap } from "lucide-react";
+import {signIn} from "@/lib/auth";
+
 
 
 export default function Home() {
+
+
+  async function handleRegister() {
+    "use server"
+    
+    await signIn("github", {redirectTo: "/dashaboard "})
+
+  }
+
+
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-b from-white to-gray-50">
+    <div className="flex flex-col min-h-screen bg-gradient-to-b from-black to-gray-950">
       <header className="container mx-auto py-6 px-4">
         <div className="flex items-center">
           <div className="flex items-center text-amber-500 font-bold text-xl">
@@ -33,7 +45,7 @@ export default function Home() {
               </p>
 
               <div className="pt-4">
-                <form>
+                <form action={handleRegister}>
                   <Button
                     type="submit"
                     size="lg"
@@ -70,6 +82,3 @@ export default function Home() {
     </div>
   );
 }
-
-
-r barata ribeiro 530 sala 52 - Ed. Apóstolo sçao paulo guanabara

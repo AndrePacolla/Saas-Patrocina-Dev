@@ -16,10 +16,13 @@ model User {
   email         String          @unique
   emailVerified DateTime?
   image         String?
+  username      String? @unique
+  bio           String? 
   accounts      Account[]
   sessions      Session[]
   // Optional for WebAuthn support
   Authenticator Authenticator[]
+  donations     Donation[]      @relation("UserDonations")
  
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -32,8 +35,19 @@ model Donation {
   donorName  String // name Donor
   donorMessage String // the message from the person who made the donation
 
+  userId  String  // the user who made the donation, if logged in
+  user    User    @relation("UserDonations", fields: [userId], references: [id])
+
+
   createdAt DateTime @default(now())
+  status    PaymaentStatus  @default(PENDING) // PENDING, COMPLETED, FAILED
 } 
+
+enum PaymaentStatus {
+  PENDING
+  PAID
+  FAILED
+}
  
 model Account {
   userId            String
