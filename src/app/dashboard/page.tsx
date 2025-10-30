@@ -13,6 +13,7 @@ export default async function Dashboard() {
     redirect("/")
   }
 
+
   return (
     <div className="p-4">
       <section className="flex items-center justify-between mb-4">

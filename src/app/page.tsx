@@ -11,7 +11,7 @@ export default function Home() {
   async function handleRegister() {
     "use server"
     
-    await signIn("github", {redirectTo:"/dashboard "})
+    await signIn("github", {redirectTo:"/dashboard"})
 
   }
 
