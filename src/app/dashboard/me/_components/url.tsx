@@ -1,0 +1,25 @@
+import { Button } from "@/components/ui/button";
+
+export function UrlPreview(){
+    return(
+   <div className=" flex flex-1 items-center p-2  text-gray-100">
+         <form className="flex flex-1 flex-col ">
+         <div className=" flex  items-center  justify-center w-full">
+           <p className="">
+             {process.env.NEXT_PUBLIC_HOST_URL}/creator/
+           </p>
+           <input type="text"
+             className="flex-1 outline-none border h-9 border-gray-300 text-black rounded-md "
+            />
+         </div>
+
+         <Button className="w-full mt-4 bg-blue-600 hover:bg-blue-700">
+
+            Salvar
+        
+        </Button>
+
+        </form>
+   </div>
+    )
+}  
